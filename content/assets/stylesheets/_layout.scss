@@ -1,0 +1,56 @@
+$susy: (
+  columns: 12,
+  column-width: 4em,
+  gutters: 1/4,
+  math: fluid,
+  output: static,
+  container-position: center
+);
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  @include padding-leader(5);
+  @include padding-trailer(1);
+  @include trailer(2);
+}
+
+.logoy {
+  height: 3em;
+}
+
+.fear {
+  position: relative;
+  top: -.08em;
+}
+
+.main {
+  @include span(6);
+}
+
+.secondary {
+  @include span(6 at 7 of 12);
+}
+
+.content {
+  @include padding-trailer(3);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include padding-leader;
+  @include padding-trailer;
+}
