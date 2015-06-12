@@ -4,12 +4,11 @@ body {
 }
 
 .logoy {
-  background: $purple;
   text-align: left;  
 }
 
 .header {
-  background: #f9f8ee;
+  background: $paper url("/assets/images/layout/bloodthunder.png") no-repeat 95% 100%;
   color: $orange;
   text-align: left;
 }
