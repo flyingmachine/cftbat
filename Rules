@@ -56,12 +56,17 @@ end
 
 
 compile '*' do
-  if item[:extension] == 'css'
-    # don’t filter stylesheets
-  elsif item.binary?
-    # don’t filter binary items
-  else
+  if item.binary?
+  elsif item.attributes[:filename] =~ /index.html/
     filter :erb
+  elsif item.attributes[:filename] =~ /md$/
+    filter :redcarpet, {
+      options: {
+        fenced_code_blocks: true,
+        tables: true
+      },
+      renderer: RedcarpetSyntaxHighlighter
+    }
     layout 'default'
   end
 end

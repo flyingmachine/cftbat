@@ -1,0 +1,7 @@
+.cover {
+  @include span(6);
+}
+
+.hype {
+  @include span(6 at 7 of 12);
+}
