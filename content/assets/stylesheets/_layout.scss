@@ -36,11 +36,11 @@ body {
 }
 
 .main {
-  @include span(6);
+  @include span(9);
 }
 
 .secondary {
-  @include span(6 at 7 of 12);
+  @include span(3 at 10 of 12);
 }
 
 .content {
