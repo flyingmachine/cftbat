@@ -1,3 +1,7 @@
+.hero {
+  @include padding-leader(2);
+}
+
 .cover {
   @include span(6);
 }

@@ -63,6 +63,6 @@ p {
 
 h1 {
   font-family: $title-family;
-  @include adjust-font-size-to($ms-up3, 1);
+  @include adjust-font-size-to($ms-up3, 2);
   @include trailer(1, $ms-up3);
 }
