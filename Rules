@@ -20,6 +20,14 @@ require "breakpoint"
 require "./lib/rule_helper"
 
 
+#static
+compile '/static/*/' do
+end
+
+route '/static/*/' do
+  item.identifier.to_s.gsub(/^\/static(\/.*)\/$/, "\\1")
+end
+
 sass_options = {
   syntax: :scss,
   load_paths: Compass.configuration.to_sass_engine_options[:load_paths],
