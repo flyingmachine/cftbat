@@ -8,7 +8,7 @@ $base-line-height: 27px;
 $sans-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif-family: "Gentium Book Basic", Palatino Linotype, Book Antiqua, Palatino, serif;
 $title-font: "Avenir Next LT Pro Condensed";
-$title-family: $title-font;
+$title-family: $title-font, $sans-family;
 
 $ms-scale: 1.3;
 $ms-up1: $base-font-size * $ms-scale;

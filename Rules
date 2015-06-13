@@ -31,8 +31,15 @@ end
 sass_options = {
   syntax: :scss,
   load_paths: Compass.configuration.to_sass_engine_options[:load_paths],
-  
 }
+
+#partials
+compile '/partials/*' do
+  filter :erb
+end
+
+route '/partials/' do
+end
 
 # sass
 compile '/assets/stylesheets/*' do
