@@ -1,11 +1,48 @@
+$home: (
+  columns: 6,
+  column-width: 4em,
+  gutters: 1/4,
+  math: fluid,
+  output: static,
+  container-position: center
+);
+
+@include layout($home);
+
+.home .content .container {
+  @include container;
+}
+
+
+$home-hero: (
+  columns: 9,
+  column-width: 4em,
+  gutters: 1/4,
+  math: fluid,
+  output: static,
+  container-position: center
+);
+
+@include layout($home-hero);
+
+.home .logoy .container {
+  @include container;
+}
+
+.content {
+  border-top: 6em solid $plum;
+}
+
 .hero {
+  @include container;
   @include padding-leader(2);
 }
 
 .cover {
-  @include span(6);
+  @include span(4 at 6 of 9);
 }
 
 .hype {
-  @include span(6 at 7 of 12);
+  @include span(5);
+  @include padding-leader(2);
 }
