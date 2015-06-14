@@ -25,17 +25,13 @@ $home-hero: (
 
 @include layout($home-hero);
 
-.home .logoy .container {
+.home .container {
   @include container;
 }
 
-.content {
-  border-top: 6em solid $plum;
-}
 
 .hero {
   @include container;
-  @include padding-leader(2);
 }
 
 .cover {
@@ -45,4 +41,20 @@ $home-hero: (
 .hype {
   @include span(5);
   @include padding-leader(2);
+}
+
+.home .header {
+  padding: 0;
+  position: relative;
+  background: $plum;
+  height: 216px;
+  .images {
+    position: absolute;
+    bottom: 0;
+    height: 188px;
+  }
+}
+
+.home h1 {
+  color: $orange;
 }
