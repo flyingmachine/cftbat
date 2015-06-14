@@ -3,6 +3,16 @@ body {
   color: #46453f;
 }
 
+a {
+  text-decoration: none;
+  color: $orange;
+
+  &:hover {
+    color: $teal;
+    cursor: pointer;
+  }
+}
+
 .logoy {
   text-align: left;  
 }

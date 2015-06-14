@@ -25,41 +25,70 @@ $home-hero: (
 
 @include layout($home-hero);
 
-.home .container {
-  @include container;
-}
-
-
-.hero {
-  @include container;
-}
-
-.cover {
-  @include span(4 at 6 of 9);
-}
-
-.hype {
-  @include span(5);
-  @include padding-leader(1);
-}
-
-.home .header {
-  padding: 0;
-  position: relative;
-  background: $plum;
-  height: 216px;
-  .images {
-    position: absolute;
-    bottom: 0;
-    height: 188px;
+.home {
+  .container {
+    @include container;
   }
-}
 
-.home h1 {
-  color: $orange;
-}
+  .hero {
+    @include container;
+  }
 
-.home .buy {
-  text-align: center;
-  clear:both;
+  .cover {
+    @include span(4 at 6 of 9);
+  }
+
+  .hype {
+    @include span(5);
+    @include padding-leader;
+  }
+
+  .header {
+    padding: 0;
+    position: relative;
+    background: $plum;
+    height: 216px;
+
+    .images {
+      position: absolute;
+      bottom: 0;
+      height: 188px;
+    }
+  }
+
+  h1 {
+    color: $orange;
+  }
+
+  .buy {
+    text-align: center;
+    clear:both;
+    @include padding-trailer;
+
+    a {
+      display: inline-block;
+      background: $orange;
+      color: $paper;
+      padding: .25em .5em;
+      border-radius: 2px;
+      font-family: $title-family;
+      &:hover {
+        background: $plum;
+      }
+    }
+  }
+
+  .testimonials {
+    @include padding-leader;
+    @include padding-trailer;
+    @include trailer;
+    background: $salmon;
+
+    h1 {
+      color: white;
+    }
+    .testimonial {
+      @include trailer;
+    }
+  }
 }
