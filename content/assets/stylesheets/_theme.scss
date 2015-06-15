@@ -18,8 +18,12 @@ a {
 }
 
 .header {
-  background: $plum url("/assets/images/layout/bt-mid.png") no-repeat 95% 100%;
+  background: $plum;
   text-align: left;
+}
+
+.header .container {
+  background: url("/assets/images/layout/bt-mid.png") no-repeat 100% 100%
 }
 
 

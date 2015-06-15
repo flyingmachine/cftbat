@@ -20,9 +20,9 @@ body {
   @include container;
 }
 
-.header {
-  @include padding-leader(5);
-  @include padding-trailer(1.5);
+.header .container {
+  @include padding-leader(4.5);
+  @include padding-trailer(1);
 }
 
 .callout {
@@ -31,7 +31,7 @@ body {
 }
 
 .logoy {
-  height: 3em;
+  
 }
 
 .fear {
