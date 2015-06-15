@@ -32,3 +32,42 @@ a {
 img {
   max-width: 100%;
 }
+
+.callout {
+  background: $salmon;
+  a, input[type=submit] {
+    font-size: 17px;
+    line-height: 1.45em;
+    display: inline-block;
+    padding: 2px .25em 0;
+    border-radius: 2px;
+    background: $lighto;
+    color: $plum;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.3);
+    font-family: $title-family;
+  }
+
+  input[type=submit] {
+    font-size: $base-font-size;
+    border-radius: 2px;
+    border: none;
+    padding: 0 .25em;
+    display: inline-block;
+  }
+
+  p:last-child {
+    margin-bottom:0;
+  }
+}
+
+input {
+  font-size: 15px;
+}
+
+input[type=email] {
+  display: inline-block;
+  padding: .25em;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+}

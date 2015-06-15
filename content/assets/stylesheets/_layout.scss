@@ -22,8 +22,12 @@ body {
 
 .header {
   @include padding-leader(5);
+  @include padding-trailer(1.5);
+}
+
+.callout {
+  @include padding-leader(1);
   @include padding-trailer(1);
-  @include trailer(2);
 }
 
 .logoy {
@@ -44,6 +48,7 @@ body {
 }
 
 .content {
+  @include leader(2);
   @include padding-trailer(3);
 }
 
