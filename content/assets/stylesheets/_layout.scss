@@ -1,3 +1,5 @@
+$M: 47em;
+
 $susy: (
   columns: 12,
   column-width: 4em,
@@ -58,4 +60,69 @@ body {
   width: 100%;
   @include padding-leader;
   @include padding-trailer;
+}
+
+// sticky nav
+.topnav-content {
+  padding: .25em 0;
+  li {
+    float: left;
+    margin-right: 1em;
+  }
+  .tweet {
+    position: relative;
+    top: 3px;
+  }
+}
+
+#top-nav {
+  @include breakpoint($M) {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: -3em;
+  }
+}
+
+#top-nav-sticky-wrapper {
+  display: none;
+  @include breakpoint($M) {
+    height: 0 !important;
+    display: block;
+  }
+  &.is-sticky {
+    #top-nav {
+      @include breakpoint($M) {
+        height: 2.25em !important;
+        top: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+.chapter-nav .sticky-wrapper {
+  height: auto !important;
+  width: auto !important;
+
+  .wrapper {
+    height: auto !important;
+    @include leader(1);
+    @include breakpoint($M) {
+      margin-top: 0;
+    }
+  }
+}
+
+.chapter-nav .sticky-wrapper.is-sticky .wrapper {
+  position: static !important;
+  top: 0 !important;
+  margin-right: 2em;
+  
+  @include breakpoint($M) {
+    position: fixed !important;
+    top: 60px !important;
+    bottom: 0;
+    overflow-y: auto;
+  }
 }

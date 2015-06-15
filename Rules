@@ -50,7 +50,14 @@ end
 
 route '/assets/stylesheets/*' do
   unless sass_partial?(item)
-    "/stylesheets/#{basename(item.attributes[:filename])}.css" 
+    "/assets/stylesheets/#{basename(item.attributes[:filename])}.css" 
+  end
+end
+
+# js
+route '/assets/scripts/*' do
+  unless item.identifier.include?("#") # emacs tmp file
+    "/assets/scripts/#{basename(item.attributes[:filename])}.js"
   end
 end
 

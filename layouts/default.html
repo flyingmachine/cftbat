@@ -1,3 +1,4 @@
+<% index = chapters.index(@item)%>
 <!DOCTYPE HTML>
 <html lang="en">
   <%= render 'head' %>
@@ -33,12 +34,15 @@
         </form>
       </div>
     </div>
+    <div id="top-nav"></div>
     <div class="container content">
       <div class="main">
         <%= yield %>
       </div>
       <div class="secondary">
-        secondary
+        <div class="wrapper">
+          secondary
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -46,5 +50,29 @@
         footer
       </div>
     </div>
+    <div class="topnav-content callout">
+      <div class="container">
+        <ul>
+          <li>
+            <a class="buy" href="http://nostarch.com/clojure">PREORDER!</a>
+          </li>
+          <li class="subscribe">
+            <form action="http://flyingmachinestudios.us1.list-manage.com/subscribe/post?u=60763b0c4890c24bd055f32e6&amp;amp;amp;id=0b40ffd1e1" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+              <input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value="">
+              <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="get email updates">
+            </form>
+          </li>
+          <li class="tweet">
+            <a class="twitter-share-button" href="https://twitter.com/share">tweet bravely and truly</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs')
+            </script>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/assets/scripts/jquery.sticky.js"></script>
+    <script src="/assets/scripts/sticky.js"></script>
   </body>
 </html>
