@@ -46,8 +46,11 @@ $home-hero: (
   .header {
     padding: 0;
     position: relative;
-    background: $plum;
     height: 216px;
+
+    .container {
+      background: $plum;
+    }
 
     .images {
       position: absolute;
