@@ -10,6 +10,7 @@ $serif-family: "Gentium Book Basic", Palatino Linotype, Book Antiqua, Palatino, 
 $title-font: "Avenir Next LT Pro Condensed";
 $title-family: $title-font, $sans-family;
 $sub-family: "Courgette", $serif-family;
+$mono-family: "Source Code Pro", "Bitstream Vera Sans Mono", monospace;
 
 $ms-scale: 1.3;
 $ms-up1: $base-font-size * $ms-scale;
@@ -73,6 +74,15 @@ p {
   @include trailer;
 }
 
+ol {
+  list-style: decimal;
+  @include trailer;
+}
+
+li p {
+  margin: 0;
+}
+
 h1 {
   font-family: $title-family;
   font-weight: bold;
@@ -84,5 +94,10 @@ h2 {
   font-family: $title-family;
   font-weight: bold;
   @include adjust-font-size-to($ms-up2, 1);
-  @include trailer(1, $ms-up2, 1);
+  @include trailer(1, $ms-up2);
+}
+
+
+.listingblock pre {
+  font-family: $mono-family;
 }
