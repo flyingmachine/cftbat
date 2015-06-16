@@ -83,20 +83,27 @@ li p {
   margin: 0;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-family: $title-family;
   font-weight: bold;
+}
+
+h1 {
   @include adjust-font-size-to($ms-up3, 2);
   @include trailer(1, $ms-up3);
 }
 
 h2 {
-  font-family: $title-family;
-  font-weight: bold;
   @include adjust-font-size-to($ms-up2, 1);
-  @include trailer(1, $ms-up2);
+  @include leader(1.5, $ms-up2);
+  @include trailer(.5, $ms-up2);
 }
 
+h3 {
+  @include adjust-font-size-to($ms-up1, 1);
+  @include leader(1.5, $ms-up1);
+  @include trailer(.5, $ms-up1);
+}
 
 .listingblock pre {
   font-family: $mono-family;
