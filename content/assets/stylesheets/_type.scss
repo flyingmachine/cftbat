@@ -79,3 +79,10 @@ h1 {
   @include adjust-font-size-to($ms-up3, 2);
   @include trailer(1, $ms-up3);
 }
+
+h2 {
+  font-family: $title-family;
+  font-weight: bold;
+  @include adjust-font-size-to($ms-up2, 1);
+  @include trailer(1, $ms-up2, 1);
+}
