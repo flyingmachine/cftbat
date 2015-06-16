@@ -10,6 +10,7 @@ module Nanoc::Asciidoctor
     def run(content, params={})
       d = Asciidoctor::Document.new(content)
       d.attributes["showtitle"] = true
+      d.attributes["source-highlighter"] = "pygments"
       d.render(params)
     end
 
