@@ -33,14 +33,6 @@ sass_options = {
   load_paths: Compass.configuration.to_sass_engine_options[:load_paths],
 }
 
-#partials
-compile '/partials/*' do
-  filter :erb
-end
-
-route '/partials/' do
-end
-
 # sass
 compile '/assets/stylesheets/*' do
   unless sass_partial?(item)
@@ -75,6 +67,9 @@ compile '*' do
       renderer: RedcarpetSyntaxHighlighter
     }
     layout 'default'
+  elsif item.attributes[:filename] =~ /asc$/
+    filter :asciidoctor, notitle: false
+    layout 'default'
   end
 end
 
@@ -85,6 +80,8 @@ route '*' do
   elsif item.binary?
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop.to_s + '.' + item[:extension].to_s
+  elsif item.identifier =~ /cftbat/
+    item.identifier.gsub(/\/cftbat/, "") + 'index.html'
   else
     # Write item with identifier /foo/ to /foo/index.html
     item.identifier + 'index.html'

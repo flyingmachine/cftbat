@@ -1,6 +1,6 @@
 include Nanoc::Helpers::Rendering
 
-CHAPTER_IDS_ORDERED = %w{
+chapter_ids_ordered = %w{
   introduction
   getting-started
   basic-emacs
@@ -21,7 +21,7 @@ CHAPTER_IDS_ORDERED = %w{
 }
 
 def chapter_order(item)
-  CHAPTER_IDS_ORDERED.index(item.identifier.gsub("/", ""))
+  chapter_ids_ordered.index(item.identifier.gsub("/", ""))
 end
 
 def chapters
