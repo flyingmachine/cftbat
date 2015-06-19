@@ -66,7 +66,7 @@ $home-hero: (
   .buy {
     text-align: center;
     clear:both;
-    @include padding-trailer;
+    @include padding-trailer(2);
 
     a {
       display: inline-block;
@@ -81,15 +81,34 @@ $home-hero: (
     }
   }
 
-  .testimonials {
-    @include padding-leader;
-    @include padding-trailer;
-    @include trailer;
-    background: $salmon;
+  .toc {
+    @include padding-leader(2);
+    @include padding-trailer(2);
+    @include trailer(2);
+    background: #333;
+    background: #262b2e;
 
     h1 {
-      color: white;
+      color: $orange;
+      margin-bottom: 0;
     }
+
+    h2 {
+      color: $paper;
+      @include leader(1, $ms-up2);
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $gold;
+      display: block;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .testimonials {
     .testimonial {
       @include trailer;
     }

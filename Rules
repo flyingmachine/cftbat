@@ -15,6 +15,7 @@
 #   because “*” matches zero or more characters.
 
 require "susy"
+require "nokogiri"
 require "compass-core"
 require "breakpoint"
 require "./lib/rule_helper"
@@ -69,7 +70,9 @@ compile '*' do
     layout 'default'
   elsif item.attributes[:filename] =~ /asc$/
     filter :asciidoctor, notitle: false
+    filter :toc
     layout 'default'
+    filter :toc
   end
 end
 

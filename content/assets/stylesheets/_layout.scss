@@ -134,3 +134,19 @@ body {
     @include padding-trailer(.5);
   }
 }
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+ol ol {
+  margin-left: 1em;
+}
