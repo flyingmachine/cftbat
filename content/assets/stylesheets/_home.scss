@@ -32,6 +32,7 @@ $home-hero: (
 
   .hero {
     @include container;
+    @include padding-trailer(2);
   }
 
   .cover {
@@ -66,7 +67,6 @@ $home-hero: (
   .buy {
     text-align: center;
     clear:both;
-    @include padding-trailer(2);
 
     a {
       display: inline-block;
@@ -109,6 +109,23 @@ $home-hero: (
 
   .testimonials {
     @include padding-leader(2);
+    @include padding-trailer(2);
+    /*
+    background: $salmon;
+    h1 {
+      color: white;
+    }
+    a {
+      color: white;
+      &:hover {
+        color: $plum;
+      }
+    }
+   .buy a {
+      background: $plum;
+      color: $paper;
+    }
+   */
     blockquote {
       font-style: italic;
       @include trailer;
