@@ -84,7 +84,6 @@ $home-hero: (
   .toc {
     @include padding-leader(2);
     @include padding-trailer(2);
-    @include trailer(2);
     background: #333;
     background: #262b2e;
 
@@ -109,8 +108,14 @@ $home-hero: (
   }
 
   .testimonials {
-    .testimonial {
+    @include padding-leader(2);
+    blockquote {
+      font-style: italic;
       @include trailer;
+    }
+    cite {
+      display: block;
+      font-style: normal;
     }
   }
 }
